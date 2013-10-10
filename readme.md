@@ -4,6 +4,7 @@
   ![Logo](URL to logo img file goes here)
 
 -->
+[![Build Status](https://travis-ci.org/codefellows/portfolio.png?branch=chapter-4)](https://travis-ci.org/codefellows/portfolio)
 
 By [Brook Riggio & Ivan Storck](http://codefellows.org).
 
