@@ -1,5 +1,6 @@
 require "test_helper"
 
+
 feature "Creating a post" do
   scenario "submit form data to create a new post" do
     # Given a completed new post form
@@ -18,4 +19,5 @@ feature "Creating a post" do
     page.text.must_include "Post was successfully created"
     page.text.must_include posts(:cr).title
   end
+
 end
