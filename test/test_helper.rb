@@ -9,6 +9,7 @@ require "minitest/focus"
 require "minitest/rails/capybara"
 
 require "minitest/colorize"
+require "minitest/pride"
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
