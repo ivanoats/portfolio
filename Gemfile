@@ -31,6 +31,9 @@ group :development, :test do
   gem "minitest-rails-capybara"
   gem "capybara-webkit"
   gem "launchy"
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "pry-debugger"
 end
 
 # To use ActiveModel has_secure_password
