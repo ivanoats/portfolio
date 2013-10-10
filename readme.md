@@ -20,7 +20,7 @@ Look for braches of this repo that correspond to daily discussions and assignmen
 
 ### Known Issues
 
-This is a work in progress. Your contributions are welcome! Please open an issue if you run in to any trouble.
+This is a work in progress. Your contributions are welcome! Please open an issue if you run in to any trouble. Better yet, fix it, test it, and send a pull request.
 
 [Issues List](https://github.com/codefellows/portfolio/issues).
 
