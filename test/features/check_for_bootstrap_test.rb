@@ -4,6 +4,6 @@ feature "As a developer I want a front-end framework so that I can easily modify
   focus
   scenario "check for bootstrap" do
     visit root_path
-    page.body.must_include "bootstrap"
+    page.body.must_match /col-/
   end
 end
