@@ -186,10 +186,10 @@ DEPENDENCIES
   minitest-focus
   minitest-rails
   minitest-rails-capybara
+  pg
   pry-debugger
   pry-doc
   pry-rails
-  pg
   rails (= 3.2.14)
   rails_12factor
   sass-rails (~> 3.2.3)
