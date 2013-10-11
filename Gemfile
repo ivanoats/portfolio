@@ -28,6 +28,11 @@ group :development, :test do
   gem "minitest-colorize"
   gem "capybara-webkit"
   gem "launchy"
+  gem "faker"
+end
+
+group :test do
+  gem "turn"
 end
 
 # To use ActiveModel has_secure_password

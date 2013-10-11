@@ -10,7 +10,7 @@
   </tr>
 
 <% @posts.each do |post| %>
-  <tr>
+  <tr id="<%= dom_id(post) %>">
     <td><%= post.title %></td>
     <td><%= post.body %></td>
     <td><%= link_to 'Show', post %></td>
