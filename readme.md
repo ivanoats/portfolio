@@ -5,6 +5,7 @@
 
 -->
 [![Build Status](https://travis-ci.org/codefellows/portfolio.png?branch=chapter-4)](https://travis-ci.org/codefellows/portfolio)
+[![Code Climate](https://codeclimate.com/github/codefellows/portfolio.png)](https://codeclimate.com/github/codefellows/portfolio)
 
 By [Brook Riggio & Ivan Storck](http://codefellows.org).
 
