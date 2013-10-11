@@ -28,6 +28,7 @@ group :development, :test do
   gem "minitest-colorize"
   gem "capybara-webkit"
   gem "launchy"
+  gem "faker"
 end
 
 group :test do
