@@ -27,10 +27,9 @@ end
 
 gem 'jquery-rails'
 
-gem "minitest-rails"
-
 group :development, :test do
   gem "minitest", "> 4.0"
+  gem "minitest-rails"
   gem 'sqlite3'
   gem "minitest-rails-capybara"
   gem "minitest-focus"
