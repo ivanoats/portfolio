@@ -34,6 +34,11 @@ group :development, :test do
   gem "pry-rails"
   gem "pry-doc"
   gem "pry-debugger"
+  gem "faker"
+end
+
+group :test do
+  gem "turn"
 end
 
 # To use ActiveModel has_secure_password

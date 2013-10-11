@@ -10,5 +10,7 @@ feature "Deleting a Post" do
 
     # Then the post is deleted
     page.wont_have_content "Code Rails"
+    page.must_have_content posts(:cf).title
+    page.must_have_content posts(:cz).title
   end
 end

@@ -3,7 +3,7 @@ require "test_helper"
 feature "Editing a Post" do
   scenario "submit updates to an existing post" do
     # Given an existing post
-    visit post_path(posts(:cf))
+    visit post_path(posts(:cr))
 
     # When I click edit and submit changed data
     click_on "Edit"

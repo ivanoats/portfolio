@@ -1,6 +1,10 @@
 cf:
-  title: Becoming a Code Fellow
+  title: <%= Faker::Name.name %>
   body: Means striving for excellence
+
+cz:
+  title: <%= Faker::Name.name %>
+  body: It's not a toy anymore
 
 cr:
   title: Code Rails
