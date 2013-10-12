@@ -1,3 +1,4 @@
+# Blog posts controller
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
@@ -44,10 +45,12 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html do
+          redirect_to @post, notice: 'Post was successfully created.'
+        end
         format.json { render json: @post, status: :created, location: @post }
       else
-        format.html { render action: "new" }
+        format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -60,10 +63,12 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html do
+          redirect_to @post, notice: 'Post was successfully updated.'
+        end
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render :edit }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
