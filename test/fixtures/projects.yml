@@ -2,9 +2,9 @@
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  technologies_used: MyString
+  name: Code Fellows Portfolio
+  technologies_used: Rails
 
 two:
-  name: MyString
-  technologies_used: MyString
+  name: Project Name Two
+  technologies_used: JavaScript
