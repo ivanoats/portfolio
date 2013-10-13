@@ -3,7 +3,7 @@ require "test_helper"
 feature "As the site owner, I want to add a portfolio item so that I can show off my work" do
   scenario "adding a new project" do
     visit projects_path
-    click_on "New Project"
+    click_on "New project"
     fill_in "Project Name", with: "Code Fellows Portfolio"
     fill_in "Technologies Used", with: "Rails, Ruby, Bootstrap, HTML5, CSS3"
     click_on "Create Project"
