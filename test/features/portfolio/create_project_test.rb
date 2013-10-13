@@ -4,8 +4,9 @@ feature "As the site owner, I want to add a portfolio item so that I can show of
   scenario "adding a new project" do
     visit projects_path
     click_on "New project"
-    fill_in "Project Name", with: "Code Fellows Portfolio"
-    fill_in "Technologies Used", with: "Rails, Ruby, Bootstrap, HTML5, CSS3"
+    save_and_open_page
+    fill_in "Name", with: "Code Fellows Portfolio"
+    fill_in "Technologies used", with: "Rails, Ruby, Bootstrap, HTML5, CSS3"
     click_on "Create Project"
     page.text.must_have "Project was successfully added"
     page.text.must_have "Code Fellows Portolio"
