@@ -34,8 +34,6 @@ group :development, :test do
   gem "minitest-rails-capybara"
   gem "minitest-focus"
   gem "minitest-colorize"
-  gem "minitest-rails"
-  gem "minitest-rails-capybara"
   gem "capybara-webkit"
   gem "launchy"
   gem "pry-rails"
