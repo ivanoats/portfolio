@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
       flash[:notice] = "Project was successfully added."
       redirect_to @project
     else
-      render new_project_path
+      render :new
     end
   end
 
