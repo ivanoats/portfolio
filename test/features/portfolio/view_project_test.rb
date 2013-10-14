@@ -6,7 +6,7 @@ feature "As the site owner, I want to add a portfolio item so that I can show of
     # When I visit /projects
     visit projects_path
     # Then I should see a list of projects
-    page.text.must_include "Code Fellows Portolio"
+    page.text.must_include "Code Fellows Portfolio"
     page.text.must_include "Project Name Two"
   end
 end
