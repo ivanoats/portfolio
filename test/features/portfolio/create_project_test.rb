@@ -7,8 +7,8 @@ feature "As the site owner, I want to add a portfolio item so that I can show of
     fill_in "Name", with: "Code Fellows Portfolio"
     fill_in "Technologies used", with: "Rails, Ruby, Bootstrap, HTML5, CSS3"
     click_on "Create Project"
-    page.text.must_have "Project was successfully added"
-    page.text.must_have "Code Fellows Portolio"
-    page.text.must_have "Rails"
+    page.text.must_include "Project was successfully added"
+    page.text.must_include "Code Fellows Portolio"
+    page.text.must_include "Rails"
   end
 end
