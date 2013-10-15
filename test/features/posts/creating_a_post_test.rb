@@ -5,9 +5,6 @@ feature "Creating a post" do
   scenario "submit form data to create a new post" do
     # Given a completed new post form
     visit new_post_path
-    puts "--------------------------------"
-    puts "Post title: #{posts(:cz).title}"
-    puts "--------------------------------"
 
     fill_in "Title", with: posts(:cr).title
     fill_in "Body", with: posts(:cr).body
