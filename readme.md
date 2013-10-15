@@ -15,8 +15,8 @@ By [Brook Riggio & Ivan Storck](http://codefellows.org).
 
 ## Usage
 
-Look for braches of this repo that correspond to daily discussions and assignments of the Code Fellows Ruby on Rails Boot Camp.
-Also look at the commit history to see step by step of how we change things around.
+- Look for braches of this repo that correspond to daily discussions and assignments of the Code Fellows Ruby on Rails Boot Camp.
+- Also look at the commit history to see step by step of how we change things around.
 
 
 
