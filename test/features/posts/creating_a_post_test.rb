@@ -1,9 +1,11 @@
 require "test_helper"
 
-
 feature "Creating a post" do
   scenario "submit form data to create a new post" do
-    # Given a completed new post form
+    # Given a signed_in user
+    sign_in_user
+
+    # And a completed new post form
     visit new_post_path
 
     fill_in "Title", with: posts(:cr).title
