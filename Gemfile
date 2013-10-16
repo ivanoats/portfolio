@@ -46,6 +46,7 @@ end
 
 group :test do
   gem 'turn'
+  gem 'simplecov', require: false
 end
 
 # To use ActiveModel has_secure_password
