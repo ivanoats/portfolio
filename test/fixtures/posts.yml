@@ -1,11 +1,15 @@
 cf:
   title: <%= Faker::Name.name %>
   body: Means striving for excellence
+  author: one
 
 cz:
   title: <%= Faker::Name.name %>
   body: It's not a toy anymore
+  author: one
 
 cr:
   title: Code Rails
   body: This is how I learned web development
+  author: one
+

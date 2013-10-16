@@ -12,7 +12,6 @@ feature "
     fill_in "Password", with: "password"
     click_on "Sign in"
 
-    save_and_open_page
     page.must_have_content "Signed in successfully"
     page.must_have_content "Sign Out"
 
