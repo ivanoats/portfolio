@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = policy_scope(Post)
+    @posts = Post.where(published: true)
 
     respond_to do |format|
       format.html # index.html.erb

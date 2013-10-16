@@ -1,7 +1,7 @@
 require "test_helper"
 
 feature "Visiting the Post Index" do
-  scenario "with existing posts" do
+  scenario "with existing posts, non logged in user" do
     # Given existing posts (in fixtures)
 
     # When I visit /posts

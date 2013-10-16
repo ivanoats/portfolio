@@ -10,6 +10,18 @@ class PostPolicy < ApplicationPolicy
   def create?
     user.author? || user.editor?
   end
+  #alias_method :update?, :create?
+  def update?
+    user.author? || user.editor?
+  end
+
+  def destroy?
+    user.editor?
+  end
+
+  def publish?
+    user.editor?
+  end
 
   class Scope < Struct.new(:user, :scope)
     def resolve
