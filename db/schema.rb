@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20131015064214) do
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "author_id"
   end
 
   create_table "projects", :force => true do |t|

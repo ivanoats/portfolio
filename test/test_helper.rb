@@ -24,8 +24,5 @@ class ActiveSupport::TestCase
     fill_in "Password", with: "password"
     click_on "Sign in"
   end
-
 end
-
-
 
