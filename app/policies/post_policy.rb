@@ -10,10 +10,10 @@ class PostPolicy < ApplicationPolicy
   def create?
     user.author? || user.editor?
   end
-  #alias_method :update?, :create?
-  def update?
-    user.author? || user.editor?
-  end
+  alias_method :update?, :create?
+  # def update?
+  #   user.author? || user.editor?
+  # end
 
   def destroy?
     user.editor?

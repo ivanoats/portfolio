@@ -16,3 +16,8 @@ cr:
   author: one
   published: true
 
+unpublished:
+  title: this is a draft
+  body: this is a draft post body
+  author: one
+  published: false

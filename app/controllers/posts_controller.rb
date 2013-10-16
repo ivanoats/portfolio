@@ -6,7 +6,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.where(published: true)
+    if current_user
+      @posts = Post.all
+    else
+      @posts = Post.where(published: true)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
