@@ -29,4 +29,8 @@ feature "Editing a Post" do
     # There is no checkbox for published
     pending
   end
+
+  scenario "unauthenticated site vistiors cannot delete posts" do
+    pending
+  end
 end

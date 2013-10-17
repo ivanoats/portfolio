@@ -26,4 +26,8 @@ feature "Creating a post" do
     pending
   end
 
+    scenario "unauthenticated site vistiors cannot create posts" do
+      pending
+    end
+
 end

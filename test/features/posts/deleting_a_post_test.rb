@@ -16,7 +16,7 @@ def set_up_a_post_by_author
 end
 
 feature "Deleting a Post" do
-  scenario "post is deleted with a click" do
+  scenario "author can delete a post" do
     # Given an existing post, and an authenticated user
     sign_in
     visit posts_path
@@ -57,6 +57,13 @@ feature "Deleting a Post" do
     page.must_have_content "Post was deleted"
     # And the post title should not be in the index
     page.wont_have_content "author's title destroy test"
+  end
+
+  scenario "unauthenticated site vistiors cannot delete posts" do
+    # Given a published post
+    # When a user visits the blog (posts#index)
+    # Then I do not see a destroy button for any post (maybe commennts later)
+   pending
   end
 
 end
