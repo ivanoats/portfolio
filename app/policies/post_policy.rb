@@ -13,7 +13,8 @@ class PostPolicy < ApplicationPolicy
   alias_method :update?, :create?
 
   def destroy?
-    user.editor?
+    return true if user.editor?
+    user.id == post.author_id
   end
 
   def publish?
