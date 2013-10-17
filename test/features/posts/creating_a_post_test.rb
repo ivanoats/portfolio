@@ -15,8 +15,8 @@ feature "Creating a post" do
     # Then a new post should be created and displayed
     page.text.must_include "Post was successfully created"
     page.text.must_include posts(:cr).title
-    page.text.must_include users(:one).email
     assert page.has_css? "#author"
+    page.text.must_include "By: #{users(:author).email}"
   end
 
   scenario "only editors can publish" do

@@ -15,7 +15,7 @@ feature "Visiting the Post Index" do
   scenario "with existing posts, editor" do
     # Given existing posts (in fixtures)
     # And an editor user
-    sign_in('editor')
+    sign_in(:editor)
 
     # When I visit /posts
     visit posts_path
@@ -28,7 +28,7 @@ feature "Visiting the Post Index" do
   scenario "with existing posts, author" do
     # Given existing posts (in fixtures)
     # And an editor user
-    sign_in('author')
+    sign_in(:author)
 
     # When I visit /posts
     visit posts_path
