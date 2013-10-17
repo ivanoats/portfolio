@@ -19,4 +19,11 @@ feature "Creating a post" do
     page.text.must_include users(:one).email
   end
 
+  scenario "only editors can publish" do
+    # Given an author's post
+    # When I visit the edit page
+    # There is no checkbox for published
+    pending
+  end
+
 end
