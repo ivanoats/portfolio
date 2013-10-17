@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if current_user
-      @posts = Post.all
+      @posts = policy_scope(Post)
     else
       @posts = Post.where(published: true)
     end
@@ -68,7 +68,7 @@ class PostsController < ApplicationController
   # PUT /posts/1.json
   def update
     @post = Post.find(params[:id])
-
+    authorize @post
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html do
@@ -86,6 +86,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @post = Post.find(params[:id])
+    authorize @post
     @post.destroy
 
     respond_to do |format|

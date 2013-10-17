@@ -11,9 +11,6 @@ class PostPolicy < ApplicationPolicy
     user.author? || user.editor?
   end
   alias_method :update?, :create?
-  # def update?
-  #   user.author? || user.editor?
-  # end
 
   def destroy?
     user.editor?
@@ -25,8 +22,10 @@ class PostPolicy < ApplicationPolicy
 
   class Scope < Struct.new(:user, :scope)
     def resolve
-      if user.author? || user.editor?
-        scope
+      if user.editor?
+        scope.all
+      elsif user.author?
+        scope.where(author_id: user.id)
       else
         scope.where(published: true)
       end
