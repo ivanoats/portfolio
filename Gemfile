@@ -32,6 +32,10 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem "rails-erd"
+end
+
 group :development, :test do
   gem 'minitest', '> 4.0'
   gem 'minitest-rails'
@@ -45,6 +49,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-debugger'
   gem 'faker'
+  gem 'railroady'
 end
 
 group :test do
