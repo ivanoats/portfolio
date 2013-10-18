@@ -8,17 +8,23 @@ class PostPolicy < ApplicationPolicy
   end
 
   def create?
-    user.author? || user.editor?
+    if user.present?
+      user.author? || user.editor?
+    end
   end
   alias_method :update?, :create?
 
   def destroy?
-    return true if user.editor?
-    user.id == post.author_id
+    if user.present?
+      return true if user.editor?
+      user.id == post.author_id
+    end
   end
 
   def publish?
-    user.editor?
+    if user.present?
+      user.editor?
+    end
   end
 
   class Scope < Struct.new(:user, :scope)

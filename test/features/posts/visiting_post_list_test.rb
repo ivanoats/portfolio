@@ -10,7 +10,10 @@ feature "Visiting the Post Index" do
     # Then the existing posts should be loaded
     page.text.must_include posts(:cf).title
     page.text.wont_include posts(:unpublished).title
+
+    # And I should not see the edit link
   end
+
 
   scenario "with existing posts, editor" do
     # Given existing posts (in fixtures)
