@@ -4,7 +4,7 @@ require "test_helper"
 # returns a post_id
 def set_up_a_post_by_author
   # Given a logged in author
-  sign_in("author")
+  sign_in(:author)
   # And a post by that author
   visit posts_path
   click_on "New Post"
