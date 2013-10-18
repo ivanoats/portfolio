@@ -4,7 +4,6 @@
 #
 # A Post is an individual entry in the blog
 class Post < ActiveRecord::Base
-  attr_accessible :body, :title, :published
 
   belongs_to :author, class_name: "User"
 
