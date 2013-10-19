@@ -17,15 +17,25 @@ feature "Editing a Post" do
   end
 
   scenario "Only editors can publish" do
-    # Given a new post
+    # Given an unpublished post (in fixtures)
+    # And an editor signed in
+    sign_in(:editor)
+    visit edit_post_path(posts(:unpublished))
     # When I update the published checkbox to checked and save
+    page.check('Published')
+    click_button "Update Post"
     # Then the post will be published
-    pending
+    page.must_have_content "was successfully updated"
+    visit posts_path
+    page.must_have_content posts(:unpublished).title
   end
 
   scenario "Authors cannot publish" do
-    # Given an author's post
+    # Given an unpublished post (in fixtures)
+    # And an author signed in
+    sign_in(:author)
     # When I visit the edit page
+    visit edit_post_path(posts(:unpublished))
     # There is no checkbox for published
     pending
   end

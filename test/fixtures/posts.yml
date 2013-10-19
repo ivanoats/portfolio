@@ -17,7 +17,7 @@ cr:
   published: true
 
 unpublished:
-  title: this is a draft
-  body: this is a draft post body
+  title: this is a unpublished draft
+  body: this is an unpublished draft post body
   author: author
   published: false
