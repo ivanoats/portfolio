@@ -1,5 +1,7 @@
 Portfolio::Application.routes.draw do
-  devise_for :users
+  devise_for :users,
+             controllers: {registrations: "users/registrations",
+                           passwords: "users/passwords"}
 
   resources :posts
   resources :projects
