@@ -27,3 +27,15 @@ published:
   body: this is a post that has been published body
   author: author
   published: true
+
+written_by_editor:
+  title: this is post that has been written by editor
+  body: this is a post that has been written by editor
+  author: editor
+  published: false
+
+written_by_author2:
+  title: this is post that has been written by author2
+  body: this is a post that has been written by author2
+  author: author2
+  published: false

@@ -8,6 +8,11 @@ author:
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
   role: author
 
+author2:
+  email: author2@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  role: author
+
 editor:
   email: editor@example.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>

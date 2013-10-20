@@ -26,6 +26,8 @@ feature "Visiting the Post Index" do
     # Then both published and ubpublished posts should be there
     page.text.must_include posts(:cf).title
     page.text.must_include posts(:unpublished).title
+    page.text.must_include posts(:written_by_editor).title
+    page.text.must_include posts(:written_by_author2).title
   end
 
   scenario "with existing posts, author" do
