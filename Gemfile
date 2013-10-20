@@ -6,6 +6,8 @@ gem 'devise'
 gem 'pundit'
 gem 'strong_parameters'
 gem 'bootstrap-sass-rails'
+gem 'omniauth-twitter'
+gem 'figaro'
 
 gem 'coveralls', require: false
 
