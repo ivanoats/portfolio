@@ -17,4 +17,14 @@ feature "As a site visitor
     # And I should see comment pending moderation
     page.must_have_content "awaiting moderation"
   end
+
+  scenario "invalid comment does not save" do
+    # Given a published post (in fixtures)
+    # When I visit the post
+    visit post_path(posts(:published))
+    # And fill out a comment with invalid attributes (like a missing comment)
+    click_on "Submit comment for approval"
+    # Then I should see errors about what is missing
+    page.must_have_content "prohibited this comment from being saved"
+  end
 end
