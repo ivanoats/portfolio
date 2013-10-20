@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20131020022144) do
     t.string   "referrer"
     t.text     "content"
     t.boolean  "approved"
+    t.integer  "post_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

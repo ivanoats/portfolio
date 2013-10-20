@@ -8,7 +8,6 @@ feature "As a site visitor
     # Given a published post (in Fixtures)
     # When I visit the post
     visit post_path(posts(:published))
-    save_and_open_page
     # I can fill out a comment form
     fill_in :comment_author,        with: "troll one"
     fill_in :comment_author_url,    with: "http://trollsite.example.com"

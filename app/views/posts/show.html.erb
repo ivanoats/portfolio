@@ -33,6 +33,7 @@
       <%= f.text_field :content %>
     </div>
     <%= f.hidden_field :referrer, value: request.referrer %>
+    <%= f.hidden_field :post_id,  value: @post.id %>
     <div class="actions">
       <%= f.submit "Submit comment for approval" %>
     <div>
