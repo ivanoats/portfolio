@@ -1,0 +1,26 @@
+<div class="comment_form">
+  <%= form_for(Comment.new) do |f| %>
+    <div class="field">
+      <%= f.label :author, "Your name" %>
+      <%= f.text_field :author %>
+    </div>
+    <div class="field">
+      <%= f.label :author_email, "Your email" %>
+      <%= f.text_field :author_email %>
+    </div>
+    <div class="field">
+      <%= f.label :author_url, "Your URL" %>
+      <%= f.text_field :author_url %>
+    </div>
+    <div class="field">
+      <%= f.label :content, "Your Comment" %>
+      <%= f.text_field :content %>
+    </div>
+    <%= f.hidden_field :referrer, value: request.referrer %>
+    <%= f.hidden_field :post_id,  value: @post.id %>
+    <div class="actions">
+      <%= f.submit "Submit comment for approval" %>
+    <div>
+  <% end %>
+</div><!-- .comment_form -->
+
