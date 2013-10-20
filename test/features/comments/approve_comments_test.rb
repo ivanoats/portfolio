@@ -6,11 +6,11 @@ feature "As an author or editor
 
   def new_comment
     visit post_path(posts(:published))
-    fill_in :author,       with: "troll one"
-    fill_in :author_url,   with: "http://trollsite.example.com"
-    fill_in :author_email, with: "troll@example.com"
-    fill_in :content,      with: "a dumb-ass comment"
-    click_on "New Comment"
+    fill_in :comment_author,       with: "troll one"
+    fill_in :comment_author_url,   with: "http://trollsite.example.com"
+    fill_in :comment_author_email, with: "troll@example.com"
+    fill_in :comment_content,      with: "a dumb-ass comment"
+    click_on "Submit comment for approval"
   end
 
   scenario "comments do not display until approved" do
