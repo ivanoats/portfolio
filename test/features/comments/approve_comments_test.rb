@@ -27,6 +27,7 @@ feature "As an author or editor
     # Given a pending comment
     new_comment
     # When I visit the comment moderation page
+    pending "after oauth implementation"
     visit comments_path
     # I can approve comments
     comment_id = current_url.split('/').last
