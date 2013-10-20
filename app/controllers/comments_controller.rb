@@ -6,7 +6,8 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment is awaiting moderation"
       redirect_to post_path(@comment.post_id)
     else
-      render post_path(@comment.post_id)
+      @post = Post.find(@comment.post_id)
+      render template: "posts/show"
     end
   end
 

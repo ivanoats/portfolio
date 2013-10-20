@@ -13,5 +13,10 @@ class Comment < ActiveRecord::Base
 #                  :referrer,
 #                  :user_agent,
 #                  :user_ip
+#                  :post_id
   belongs_to :post
+  validates :content,      presence: true
+  validates :author_email, presence: true
+  validates :author,       presence: true
 end
+
