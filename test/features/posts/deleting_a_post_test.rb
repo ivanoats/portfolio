@@ -60,10 +60,11 @@ feature "Deleting a Post" do
   end
 
   scenario "unauthenticated site vistiors cannot delete posts" do
-    # Given a published post
+    # Given a published post (in fixtures)
     # When a user visits the blog (posts#index)
-    # Then I do not see a destroy button for any post (maybe commennts later)
-   pending
+    visit posts_path
+    # Then I do not see a destroy button for any post (maybe comments later)
+    page.wont_have_link "Destroy"
   end
 
 end

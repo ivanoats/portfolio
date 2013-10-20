@@ -21,3 +21,9 @@ unpublished:
   body: this is an unpublished draft post body
   author: author
   published: false
+
+published:
+  title: this is post that has been published
+  body: this is a post that has been published body
+  author: author
+  published: true

@@ -37,10 +37,7 @@ feature "Editing a Post" do
     # When I visit the edit page
     visit edit_post_path(posts(:unpublished))
     # There is no checkbox for published
-    pending
+    page.wont_have_text "Published"
   end
 
-  scenario "unauthenticated site vistiors cannot delete posts" do
-    pending
-  end
 end
