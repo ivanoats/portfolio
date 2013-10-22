@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <%= form_for(@comment) do |f| %>
+  <%= form_for [@post, @comment] do |f| %>
     <div class="field">
       <%= f.label :author, "Your name" %>
       <%= f.text_field :author %>

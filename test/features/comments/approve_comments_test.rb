@@ -31,7 +31,7 @@ feature "As an author or editor
     # When I visit the comment moderation page
     pending "after oauth implementation"
 
-    visit comments_path
+    visit post_comments_path
     # I can approve comments
     comment_id = current_url.split('/').last
     click_link("Edit", href: "/comments#{comment_id}/edit")
