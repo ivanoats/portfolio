@@ -23,11 +23,14 @@ feature "As an author or editor
     page.wont_have_content "dumb-ass"
   end
 
-  scenario "Approve comments" do
-    # Given a pending comment
-    new_comment
+  scenario "Editor can Approve comments" do
+    # Given a pending comment (in before)
+    # And I am signed in as an editor
+    sign_in(:editor)
+
     # When I visit the comment moderation page
     pending "after oauth implementation"
+
     visit comments_path
     # I can approve comments
     comment_id = current_url.split('/').last
