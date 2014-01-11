@@ -15,18 +15,18 @@ By [Brook Riggio & Ivan Storck](http://codefellows.org).
 
 ## Usage
 
-- Look for braches of this repo that correspond to daily discussions and assignments of the Code Fellows Ruby on Rails Boot Camp.
+- Look for braches of this repo that correspond to Chapter by Chapter discussions and assignments of the Code Rails Curriculum.
 - Also look at the commit history to see step by step of how we change things around.
 
 
 
 ### Known Issues
 
-This is a work in progress. Your contributions are welcome! Please open an issue if you run in to any trouble. Better yet, fix it, test it, and send a pull request.
+This is a work in progress. Your comments and contributions are welcome! Please open an issue if you run in to any trouble.
 
 [Issues List](https://github.com/codefellows/portfolio/issues).
 
-## Authors
+## Authors & Contributors
 
 * [Brook Riggio](https://github.com/brookr)
 * [Ivan Storck](https://github.com/ivanoats)
