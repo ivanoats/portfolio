@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/codefellows/foundation-rails.git
+  revision: 27643d3b087f22a7a5332e733daa66c8dd52f00d
+  specs:
+    foundation-rails (5.0.3.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -137,6 +145,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  foundation-rails!
   jbuilder (~> 1.2)
   jquery-rails
   launchy

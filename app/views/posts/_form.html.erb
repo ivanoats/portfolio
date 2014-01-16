@@ -11,15 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="row collapse">
+    <div class="small-3 columns">
+      <%= f.label :title, class: "right inline", title: "Full post title", data: {tooltip: true } %><br>
+    </div>
+
+    <div class="small-9 columns">
+      <%= f.text_field :title %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+  <div class="row collapse">
+    <div class="small-3 columns">
+      <%= f.label :body, class: "right inline", title: "Full text of the post", data: {tooltip: true } %><br>
+    </div>
+
+    <div class="small-9 columns">
+      <%= f.text_area :body %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row collapse">
+    <div class="small-9 small-offset-3 columns">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
