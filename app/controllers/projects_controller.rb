@@ -19,15 +19,15 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    set_project
   end
 
   def edit
-    @project = Project.find(params[:id])
+    set_project
   end
 
   def update
-    @project = Project.find(params[:id])
+    set_project
 
     if @project.update_attributes(project_params)
       redirect_to @project, notice: 'Project was successfully updated.'
@@ -37,6 +37,10 @@ class ProjectsController < ApplicationController
   end
 
 private
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
 
   def project_params
     params.require(:project).permit(:name, :technologies_used)
