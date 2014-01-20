@@ -30,16 +30,20 @@
         </ul>
       </div>
     </nav>
+    <% flash.each do |key, value| %>
+      <div class="row">
+        <div class="large-8 columns">
+          <div data-alert class="alert-box round <%= flash_class(key) %>">
+            <%= value %>
+          </div>
+        </div>
+      </div>
+    <% end %>
     <div class="row">
       <div class="large-8 columns">
         <%= yield %>
       </div>
       <div class="large-4 columns">
-        <% flash.each do |key, value| %>
-          <div class="<%= flash_class(key) %>">
-            <%= value %>
-          </div>
-        <% end %>
         <h2 class="subheader">About Us</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
