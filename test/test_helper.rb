@@ -2,6 +2,12 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require "minitest/rails/capybara"
+require "turn/autorun"
+
+Turn.config do |turn|
+  turn.format = :outline
+  turn.natural = true
+end
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
