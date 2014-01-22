@@ -9,6 +9,7 @@ gem "minitest-rails"
 gem "rails", "4.0.2"
 gem "sass-rails", "~> 4.0.0"
 gem "turbolinks"
+gem "turn", "~> 0.9.6", require: false
 gem "uglifier", ">= 1.3.0"
 gem "foundation-rails", "~> 5.0.3"
 
