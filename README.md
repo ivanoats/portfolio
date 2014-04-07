@@ -18,13 +18,15 @@ By [Brook Riggio & Ivan Storck](http://codefellows.org).
 - Look for braches of this repo that correspond to Chapter by Chapter discussions and assignments of the Code Rails Curriculum.
 - Also look at the commit history to see step by step of how we change things around.
 
+## Contributing
 
+Please contribute tested code via a Github Pull Request
 
 ### Known Issues
 
 This is a work in progress. Your comments and contributions are welcome! Please open an issue if you run in to any trouble.
 
-[Issues List](https://github.com/codefellows/portfolio/issues).
+[Issues List](https://github.com/UW-Advanced-Rails-2014/portfolio/issues).
 
 ## Authors & Contributors
 
