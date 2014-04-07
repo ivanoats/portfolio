@@ -14,6 +14,9 @@ gem "turbolinks"
 gem "turn", "~> 0.9.6", require: false
 gem "uglifier", ">= 1.3.0"
 gem "pg"
+gem "omniauth"
+gem 'omniauth-twitter'
+gem 'figaro'
 
 group :doc do
   gem "sdoc", require: false
