@@ -5,7 +5,7 @@ feature "
   I want to sign in to the app
   so that I can access my content.
 " do
-  scenario "a user signs in", js: true do
+  scenario "a user signs in" do
     # Given an existing user
     visit root_path
     click_on "Sign In"
@@ -35,7 +35,7 @@ feature "
                             info: { nickname: 'test_twitter_user'},
                             })
      click_on "Sign in with Twitter"
-     page.must_have_content "test_twitter_user, you are signed in!"                      
+     page.must_have_content "test_twitter_user, you are signed in!"
   end
 
 end
