@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.0"
+ruby "2.1.1"
 
 gem "coffee-rails", "~> 4.0.0"
 gem "devise", "~> 3.2.2"
@@ -8,7 +8,7 @@ gem "foundation-rails", "~> 5.0.3"
 gem "jbuilder", "~> 1.2"
 gem "jquery-rails"
 gem "minitest-rails"
-gem "rails", "4.0.2"
+gem "rails", "4.0.4"
 gem "sass-rails", "~> 4.0.0"
 gem "turbolinks"
 gem "turn", "~> 0.9.6", require: false
