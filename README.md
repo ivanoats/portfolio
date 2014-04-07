@@ -4,7 +4,7 @@
   ![Logo](URL to logo img file goes here)
 
 -->
-[![Build Status](https://travis-ci.org/codefellows/portfolio.png)](https://travis-ci.org/codefellows/portfolio)
+[![Build Status](https://travis-ci.org/UW-Advanced-Rails-2014/portfolio.svg)](https://travis-ci.org/UW-Advanced-Rails-2014/portfolio)
 [![Code Climate](https://codeclimate.com/github/codefellows/portfolio.png)](https://codeclimate.com/github/codefellows/portfolio)
 
 By [Brook Riggio & Ivan Storck](http://codefellows.org).

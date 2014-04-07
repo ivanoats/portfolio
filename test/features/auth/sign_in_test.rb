@@ -5,7 +5,7 @@ feature "
   I want to sign in to the app
   so that I can access my content.
 " do
-  scenario "a user signs in" do
+  scenario "a user signs in", js: true do
     # Given an existing user
     visit root_path
     click_on "Sign In"
