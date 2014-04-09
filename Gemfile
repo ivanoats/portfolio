@@ -31,3 +31,10 @@ group :test do
   gem "launchy"
   gem "poltergeist"
 end
+
+group :development, :test do
+  gem "faker"
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "launchy"
+end
