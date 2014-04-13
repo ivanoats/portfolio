@@ -9,12 +9,11 @@ feature "As a site visitor
     # When I visit the post
     visit post_path(posts(:published))
     # I can fill out a comment form
-    save_and_open_page
-    fill_in :author,       with: "troll one"
-    fill_in :author_url,   with: "http://trollsite.example.com"
-    fill_in :author_email, with: "troll@example.com"
-    fill_in :content,      with: "a dumb-ass comment"
-    click_on "New Comment"
+    fill_in :comment_author,       with: "troll one"
+    fill_in :comment_author_url,   with: "http://trollsite.example.com"
+    fill_in :comment_author_email, with: "troll@example.com"
+    fill_in :comment_content,      with: "a dumb-ass comment"
+    click_on "Submit comment for approval"
     # And I should see comment pending moderation
     page.must_have_content "awaiting moderation"
   end

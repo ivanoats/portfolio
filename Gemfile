@@ -17,6 +17,7 @@ gem "pg"
 gem "omniauth"
 gem 'omniauth-twitter'
 gem 'figaro'
+gem 'pundit'
 
 group :doc do
   gem "sdoc", require: false
@@ -28,7 +29,6 @@ end
 
 group :test do
   gem "minitest-rails-capybara"
-  gem "launchy"
   gem "poltergeist"
 end
 

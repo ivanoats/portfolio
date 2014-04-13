@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: comments
+#
+#  id               :integer          not null, primary key
+#  author           :string(255)
+#  author_url       :string(255)
+#  author_email     :string(255)
+#  user_ip          :string(255)
+#  user_agent       :string(255)
+#  referrer         :string(255)
+#  content          :text
+#  approved         :boolean
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  commentable_id   :integer
+#  commentable_type :string(255)
+#
+
+troll:
+  author: editor
+  author_url: http://troll.example.com
+  author_email: troll@troll.example.com
+  content: you are a terrible person
+  commentable: published
+  commentable_type: post
+
+ubertroll:
+  author: author
+  author_url: http://ubertroll.example.com
+  author_email: ubertroll@troll.example.com
+  content: your mom
+  commentable: published (Post)
