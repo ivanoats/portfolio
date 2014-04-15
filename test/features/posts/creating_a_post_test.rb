@@ -17,6 +17,7 @@ feature "Creating a post" do
     page.text.must_include posts(:cr).body
     assert page.has_css? "#author"
     page.text.must_include users(:author).email
+    pending "status indicator"
     #TODO page.text.must_include "Status: Unpublished"
   end
 
@@ -53,6 +54,7 @@ feature "Creating a post" do
     click_on "Create Post"
 
     # Then the published post should be shown
+    pending "status indicator"
     #TODO page.text.must_include "Status: Published"
   end
 end
