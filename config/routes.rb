@@ -1,7 +1,18 @@
 Portfolio::Application.routes.draw do
-  devise_for :users
-  resources :posts
-  resources :projects
+
+  devise_for :users,
+    controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
+  resources :posts do
+    resources :comments
+  end
+
+  resources :projects do
+    resources :comments
+  end
+
+  #admin comments
+  resources :comments
 
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
