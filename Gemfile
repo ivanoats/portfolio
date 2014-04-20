@@ -7,11 +7,11 @@ gem "devise", "~> 3.2.2"
 gem "foundation-rails", "~> 5.0.3"
 gem "jbuilder", "~> 1.2"
 gem "jquery-rails"
-gem "minitest-rails"
-gem "rails", "4.0.4"
+gem "minitest-rails", "2.0.0.beta1"
+gem "rails", "4.1.0"
 gem "sass-rails", "~> 4.0.0"
 gem "turbolinks"
-gem "turn", "~> 0.9.6", require: false
+#gem "turn", "~> 0.9.6", require: false
 gem "uglifier", ">= 1.3.0"
 gem "pg"
 gem "omniauth"
@@ -28,7 +28,7 @@ group :produciton do
 end
 
 group :test do
-  gem "minitest-rails-capybara"
+  gem "minitest-rails-capybara", "2.0.0.beta1"
   gem "poltergeist"
 end
 

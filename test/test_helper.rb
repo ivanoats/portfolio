@@ -3,14 +3,8 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require "capybara/poltergeist"
 require "minitest/rails/capybara"
-require "turn/autorun"
 
 Capybara.javascript_driver = :poltergeist
-
-Turn.config do |turn|
-  turn.format = :outline
-  turn.natural = true
-end
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
