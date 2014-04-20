@@ -17,7 +17,8 @@ feature "Creating a post" do
     page.text.must_include posts(:cr).body
     assert page.has_css? "#author"
     page.text.must_include users(:author).email
-    page.text.must_include "Status: Unpublished"
+    pending "status indicator"
+    #TODO page.text.must_include "Status: Unpublished"
   end
 
   scenario "unauthenticated site visitors cannot visit new_post_path" do
@@ -53,6 +54,7 @@ feature "Creating a post" do
     click_on "Create Post"
 
     # Then the published post should be shown
-    page.text.must_include "Status: Published"
+    pending "status indicator"
+    #TODO page.text.must_include "Status: Published"
   end
 end

@@ -14,6 +14,10 @@ gem "turbolinks"
 gem "turn", "~> 0.9.6", require: false
 gem "uglifier", ">= 1.3.0"
 gem "pg"
+gem "omniauth"
+gem 'omniauth-twitter'
+gem 'figaro'
+gem 'pundit'
 
 group :doc do
   gem "sdoc", require: false
@@ -25,6 +29,12 @@ end
 
 group :test do
   gem "minitest-rails-capybara"
-  gem "launchy"
   gem "poltergeist"
+end
+
+group :development, :test do
+  gem "faker"
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "launchy"
 end

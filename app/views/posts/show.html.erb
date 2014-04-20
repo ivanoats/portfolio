@@ -1,24 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+<article>
+<h1><%= @post.title %></h1>
 
 <p id="author">
   <b>By:</b>
-  <%= @post.author.email %>
+  <%= @post.author ? @post.author.email : "Unknown" %>
 </p>
 
-<p id="status">
-  <b>Status:</b>
-  <%= @post.published? ? "Published" : "Unpublished" %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div id="post_body">
+  <%= @post.body %>
+</div>
+<hr>
+<% if policy(@post).update? %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
+</article>
+<% if @post.comments.any? %>
+  <%= render @comments %>
+<% end %>
+<%= render "comments/form" %>
+<p class="back_link"><%= link_to 'Back to the blog', posts_path %></p>
