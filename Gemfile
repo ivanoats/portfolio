@@ -11,7 +11,6 @@ gem "minitest-rails", "2.0.0.beta1"
 gem "rails", "4.1.0"
 gem "sass-rails", "~> 4.0.0"
 gem "turbolinks"
-#gem "turn", "~> 0.9.6", require: false
 gem "uglifier", ">= 1.3.0"
 gem "pg"
 gem "omniauth"
@@ -38,3 +37,5 @@ group :development, :test do
   gem "pry-doc"
   gem "launchy"
 end
+
+gem 'spring', group: :development
