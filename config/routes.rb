@@ -1,5 +1,7 @@
 Portfolio::Application.routes.draw do
 
+  mount MongodbLogger::Server.new, :at => "/devlogs"
+
   devise_for :users,
     controllers: {omniauth_callbacks: "omniauth_callbacks"}
 

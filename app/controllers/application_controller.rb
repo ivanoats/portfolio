@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   include Pundit
+  include MongodbLogger::Base
+
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
