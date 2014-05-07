@@ -17,6 +17,7 @@ gem "omniauth"
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'pundit'
+gem 'postmark-mitt'
 
 group :doc do
   gem "sdoc", require: false
