@@ -18,6 +18,9 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'pundit'
 gem 'postmark-mitt'
+gem 'sidekiq'
+gem 'foreman'
+gem 'sinatra', require: false
 
 group :doc do
   gem "sdoc", require: false
@@ -39,4 +42,4 @@ group :development, :test do
   gem "launchy"
 end
 
-gem 'spring', group: :development
+# gem 'spring', group: :development
