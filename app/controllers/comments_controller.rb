@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
     if @comment.save
       flash[:notice] = "Comment is awaiting moderation"
       redirect_to @commentable
+      # TODO: send editors an email with the comment and a link to approve
     else
       instance_variable_set("@#{@resource.singularize}".to_sym, @commentable)
       render template: "#{@resource}/show"

@@ -7,7 +7,7 @@ gem "devise", "~> 3.2.2"
 gem "foundation-rails", "~> 5.0.3"
 gem "jbuilder", "~> 1.2"
 gem "jquery-rails"
-gem "minitest-rails", "2.0.0.beta1"
+gem "minitest-rails", "2.0.0"
 gem "rails", "4.1.0"
 gem "sass-rails", "~> 4.0.0"
 gem "turbolinks"
@@ -18,6 +18,7 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'pundit'
 gem 'postmark-mitt'
+gem 'postmark-rails', '~> 0.7.0'
 
 group :doc do
   gem "sdoc", require: false
@@ -28,7 +29,7 @@ group :produciton do
 end
 
 group :test do
-  gem "minitest-rails-capybara", "2.0.0.beta1"
+  gem "minitest-rails-capybara", "2.0.0"
   gem "poltergeist"
 end
 
@@ -39,4 +40,4 @@ group :development, :test do
   gem "launchy"
 end
 
-gem 'spring', group: :development
+#gem 'spring', group: :development
