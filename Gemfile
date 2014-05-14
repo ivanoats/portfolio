@@ -19,6 +19,9 @@ gem 'figaro'
 gem 'pundit'
 gem 'postmark-mitt'
 gem 'postmark-rails', '~> 0.7.0'
+gem 'sidekiq'
+gem 'foreman'
+gem 'sinatra', require: false
 
 group :doc do
   gem "sdoc", require: false
@@ -40,4 +43,4 @@ group :development, :test do
   gem "launchy"
 end
 
-#gem 'spring', group: :development
+gem 'spring', group: :development
