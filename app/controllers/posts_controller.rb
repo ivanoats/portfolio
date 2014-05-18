@@ -1,3 +1,4 @@
+# blog post controller
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
@@ -5,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    logger.debug current_user
     @posts = policy_scope(Post)
   end
 

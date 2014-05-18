@@ -1,3 +1,4 @@
+# A post policy describes authorization for blog posts
 class PostPolicy
   attr_accessor :user, :post
 
