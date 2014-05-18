@@ -32,7 +32,7 @@ feature "
     OmniAuth.config.add_mock(:twitter,
                             {
                             uid: '12345',
-                            info: { nickname: 'test_twitter_user'},
+                            info: { nickname: 'test_twitter_user'}
                             })
      click_on "Sign in with Twitter"
      page.must_have_content "test_twitter_user, you are signed in!"

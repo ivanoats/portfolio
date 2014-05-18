@@ -6,6 +6,6 @@ class CommentMailerPreview < ActionMailer::Preview
   
     @commentable = Post.create published: true
     
-    CommentMailer.new_comment(@comment,@commentable)
+    CommentMailer.new_comment(@comment, @commentable)
   end
 end

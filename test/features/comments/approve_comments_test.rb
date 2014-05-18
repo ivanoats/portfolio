@@ -34,8 +34,8 @@ feature "As an author or editor
     visit comments_path
 
     # I can approve comments
-    comment_id = Comment.last.id
-    comment_row ="tr#comment_#{comment_id}"
+    comment_id  = Comment.last.id
+    comment_row = "tr#comment_#{comment_id}"
     page.find(comment_row).click_on("Approve")
 
     # click_link("Edit", href: "/comments#{comment_id}/edit")

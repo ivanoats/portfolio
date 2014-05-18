@@ -12,7 +12,6 @@ feature "Deleting a Post" do
     post_title = page.find("table tr:last td:first").text
     page.find("table tr:last").click_on "Destroy"
 
-
     # Then the post is deleted
     page.wont_have_content post_title
   end

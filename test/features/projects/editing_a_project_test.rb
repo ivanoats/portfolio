@@ -15,7 +15,7 @@ feature "As the site owner, I want to edit a project so that I can correct typos
     page.text.wont_include "Code Fellows Portfolio"
   end
 
-   scenario "incorrectly editing an existing project" do
+  scenario "incorrectly editing an existing project" do
     # Given an existing project
     visit edit_project_path(projects(:portfolio))
 

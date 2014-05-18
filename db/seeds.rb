@@ -9,7 +9,7 @@
                       email: "editor@example.com",
                       password: "password",
                       password_confirmation: "password",
-                      role: "editor" )
+                      role: "editor")
 10.times do
   @post = Post.create(title: Faker::Company.catch_phrase,
               body:  Faker::Lorem.paragraphs.join("\n"),
