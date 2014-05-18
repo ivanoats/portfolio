@@ -1,2 +1,1 @@
-StringLiterals:
-  Enables: false
+inherit_from: rubocop-todo.yml
