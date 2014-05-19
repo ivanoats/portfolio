@@ -46,17 +46,31 @@ describe PostsController do
   end
 
   describe 'POST /posts' do
-    it 'is successful' do
-      response.status.must_equal 200
-    end
-
     it 'can create a post via api' do
       mock_post = Struct.new(:title, :body, :published)
       expected = mock_post.new(Faker::Name.name, Faker::Lorem.paragraph, true)
+      post_params = {
+                      post: {
+                              title: expected.title,
+                              body: expected.body,
+                              published: expected.published
+                      }
+                    }
+puts post_params      
+      request_headers = {
+        'Accept' => 'application/json',
+        'Content-type' => 'application/json'
+      }
+      sign_in users(:editor)
 
-      post :index, expected.as_json, format: :json
+      post :create, post_params, request_headers, format: :json
+puts response.body
+      response.status.must_equal 200
+
       # why is this not getting posted as json?
       get :index, format: :json
+      puts response.body
+
       body = JSON.parse(response.body)
       post_titles = body.map { |m| m['title'] }
       post_titles.must_include expected.title
