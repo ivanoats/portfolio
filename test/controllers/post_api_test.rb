@@ -24,9 +24,13 @@ describe PostsController do
       Post.create!(title: @title3, body: @body3, published: false)
     end
 
-    it 'returns all the published posts' do
+    it 'is successful' do
       get :index, format: :json
       response.status.must_equal 200
+    end
+
+    it 'returns all the published posts' do
+      get :index, format: :json
       body = JSON.parse(response.body)
       post_titles = body.map { |m| m['title'] }
       post_titles.must_include @title1
@@ -35,10 +39,27 @@ describe PostsController do
 
     it 'does not return the unpublished posts' do
       get :index, format: :json
-      response.status.must_equal 200
       body = JSON.parse(response.body)
       post_titles = body.map { |m| m['title'] }
       post_titles.wont_include @title3
+    end
+  end
+
+  describe 'POST /posts' do
+    it 'is successful' do
+      response.status.must_equal 200
+    end
+
+    it 'can create a post via api' do
+      mock_post = Struct.new(:title, :body, :published)
+      expected = mock_post.new(Faker::Name.name, Faker::Lorem.paragraph, true)
+
+      post :index, expected.as_json, format: :json
+      # why is this not getting posted as json?
+      get :index, format: :json
+      body = JSON.parse(response.body)
+      post_titles = body.map { |m| m['title'] }
+      post_titles.must_include expected.title
     end
   end
 end
