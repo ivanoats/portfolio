@@ -50,13 +50,13 @@ describe PostsController do
       mock_post = Struct.new(:title, :body, :published)
       expected = mock_post.new(Faker::Name.name, Faker::Lorem.paragraph, true)
       post_params = {
-                      post: {
-                              title: expected.title,
-                              body: expected.body,
-                              published: expected.published
-                      }
-                    }
-puts post_params      
+        post: {
+          title: expected.title,
+          body: expected.body,
+          published: expected.published
+        }
+      }
+
       request_headers = {
         'Accept' => 'application/json',
         'Content-type' => 'application/json'
@@ -64,16 +64,24 @@ puts post_params
       sign_in users(:editor)
 
       post :create, post_params, request_headers, format: :json
-puts response.body
-      response.status.must_equal 200
-
-      # why is this not getting posted as json?
-      get :index, format: :json
+      # DEBUG
       puts response.body
+      # DEBUG
+      Post.count.must_equal 1
+      Post.last.title.must_equal expected.title
+      response.status.must_equal 201
+    end
+  end
 
-      body = JSON.parse(response.body)
-      post_titles = body.map { |m| m['title'] }
-      post_titles.must_include expected.title
+  describe 'DELETE /posts/:id' do
+    it 'deletes a post via JSON' do
+      skip
+    end
+  end
+
+  describe 'PATCH /posts/:id' do
+    it 'updates a post via JSON' do
+      skip
     end
   end
 end
