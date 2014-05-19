@@ -34,7 +34,6 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        binding.pry
 
         current_user.posts << @post
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
