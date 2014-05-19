@@ -47,16 +47,14 @@ describe PostsController do
 
   describe 'POST /posts' do
     it 'can create a post via api' do
-      mock_post = Struct.new(:title, :body, :published)
-      expected = mock_post.new(Faker::Name.name, Faker::Lorem.paragraph, true)
-      post_params = {
-        post: {
-          title: expected.title,
-          body: expected.body,
-          published: expected.published
-        }
+      expected = {
+        title: Faker::Name.name,
+        body: Faker::Lorem.paragraph,
+        published: true
       }
-
+      post_params = {
+        post: expected
+      }
       request_headers = {
         'Accept' => 'application/json',
         'Content-type' => 'application/json'
@@ -65,10 +63,10 @@ describe PostsController do
 
       post :create, post_params, request_headers, format: :json
       # DEBUG
-      puts response.body
+      puts "response.body #{response.body} END"
       # DEBUG
       Post.count.must_equal 1
-      Post.last.title.must_equal expected.title
+      Post.last.title.must_equal expected[:title]
       response.status.must_equal 201
     end
   end
