@@ -1,0 +1,13 @@
+# hack until regreen is fixed
+PLATFORM = RUBY_PLATFORM
+
+require 'autotest/restart'
+require 'autotest/growl'
+require 'autotest/timestamp'
+require 'minitest/pride'
+
+Autotest.add_hook :initialize do |autotest|
+  %w{.git .svn .hg .DS_Store ._* vendor tmp log doc}.each do |exception|
+    autotest.add_exception(exception)
+  end
+end

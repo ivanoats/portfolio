@@ -3,7 +3,7 @@ require "test_helper"
 feature "Creating a post" do
   scenario "submit form data to create a new post" do
     # Given an authorized user complets a new post format
-    sign_in(:author)
+    capy_sign_in(:author)
     visit new_post_path
 
     fill_in "Title", with: posts(:cr).title
@@ -28,7 +28,7 @@ feature "Creating a post" do
 
   scenario "authors can't publish" do
     # Given an author's account
-    sign_in(:author)
+    capy_sign_in(:author)
 
     # When I visit the new page
     visit new_post_path
@@ -39,7 +39,7 @@ feature "Creating a post" do
 
   scenario "editors can publish" do
     # Given an editor's account
-    sign_in(:editor)
+    capy_sign_in(:editor)
 
     # When I visit the new page
     visit new_post_path

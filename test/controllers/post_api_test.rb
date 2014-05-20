@@ -1,6 +1,7 @@
 require 'test_helper'
 
 describe PostsController do
+  # reference: https://github.com/plataformatec/devise/wiki/How-To%3a-Controllers-tests-with-Rails-3-%28and-rspec%29
   include Devise::TestHelpers
 
   before :all do
@@ -55,16 +56,12 @@ describe PostsController do
       post_params = {
         post: expected
       }
-      request_headers = {
-        'Accept' => 'application/json',
-        'Content-type' => 'application/json'
-      }
-      sign_in users(:editor)
 
-      post :create, post_params, request_headers, format: :json
-      # DEBUG
-      puts "response.body #{response.body} END"
-      # DEBUG
+      sign_in users(:editor)
+      request.env["HTTP_ACCEPT"] = "application/json"
+      request.env["CONTENT_TYPE"] = "application/json"
+      post :create, post_params, format: :json
+
       Post.count.must_equal 1
       Post.last.title.must_equal expected[:title]
       response.status.must_equal 201

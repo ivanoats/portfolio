@@ -37,8 +37,13 @@ end
 
 group :development, :test do
   gem "minitest-rails-capybara", "2.0.0"
+  gem "ZenTest"
+  gem "autotest-rails"
+  gem "autotest-fsevent" # platform: mac
+  gem "autotest-growl"
   gem "faker"
   gem "pry-rails"
+  gem "pry-byebug"
   gem "pry-doc"
   gem "launchy"
 end

@@ -4,6 +4,7 @@ require 'rails/test_help'
 require 'capybara/poltergeist'
 require 'minitest/rails/capybara'
 require 'minitest/rails'
+require 'minitest/pride'
 
 Capybara.javascript_driver = :poltergeist
 
@@ -24,7 +25,7 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
-    def sign_in(role = :editor)
+    def capy_sign_in(role = :editor)
       visit new_user_session_path
       fill_in 'Email', with: users(role).email
       fill_in 'Password', with: 'password'

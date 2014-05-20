@@ -28,7 +28,7 @@ feature "As an author or editor
     new_comment
 
     # And I am signed in as an editor
-    sign_in(:editor)
+    capy_sign_in(:editor)
 
     # When I visit the comment moderation page
     visit comments_path

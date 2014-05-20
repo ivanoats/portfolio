@@ -3,7 +3,7 @@ require "test_helper"
 feature "Deleting a Post" do
   scenario "post is deleted with a click" do
     # Given I am signed in as an editor
-    sign_in(:editor)
+    capy_sign_in(:editor)
 
     # And an existing post (from fixtures)
     visit posts_path
