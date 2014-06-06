@@ -1,20 +1,20 @@
 require "test_helper"
 
 feature "As the site owner, I want to add a portfolio item so that I can show off my work" do
-  scenario "adding a new project" do
+  scenario "adding a new project", js: true do
     visit projects_path
     click_on "New project"
     fill_in "Name", with: "Code Fellows Portfolio"
     fill_in "Technologies used", with: "Rails, Ruby, Bootstrap, HTML5, CSS3"
     click_on "Create Project"
-    page.text.must_include "Project has been created"
     page.text.must_include "Code Fellows Portfolio"
     page.text.must_include "Rails"
   end
 
-  scenario "new project has invalid data" do
+  scenario "new project has invalid data", js: true do
     # Given invalid project data is entered in a form
-    visit new_project_path
+    visit projects_path
+    click_on "New project"
     fill_in "Name", with: "Q"
 
     # When the form is submitted with a short name and missing technologies_used field
